@@ -1,0 +1,183 @@
+* {
+    box-sizing: border-box;
+}
+.container header .logo img{
+    width: 250px;
+    border-radius: 100%;
+    transition: 0.4s;
+}
+.container header .logo img:hover{
+    padding: 15px;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #2b2d42, #8d99ae);
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 3rem;
+    animation: fadeIn 1s ease;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-flex;
+    margin: 0 15px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ffffff;
+    transition: width 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.section {
+    margin: 40px 0;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+.slider {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+.slide {
+    display: none;
+    animation: fade 1.5s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background: #ff4757;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background: #ff6b81;
+    transform: scale(1.05);
+}
+
+.hidden {
+    display: none;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.gallery img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05) rotate(2deg);
+}
+
+.notification {
+    background: #ff4757;
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 5px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 1000;
+}
+
+.notification.show {
+    display: block;
+    opacity: 1;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: #ffffff;
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    font-size: 2rem; /* İkon boyutunu artırdık */
+    color: #ffffff;
+    transition: transform 0.3s, color 0.3s; /* Hover efekti için geçiş */
+}
+
+.social-icons a:hover {
+    transform: scale(1.2); /* Hover'da boyutu artır */
+    color: #ff4757; /* Hover'da renk değişimi */
+}
+
+/* Animasyonlar */
+@keyframes fade {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
